@@ -3,8 +3,8 @@ function hasTargetSum(array, target) {
  for (let i = 0 , n = array.length ; i < (n / 2) ; i++){
    for(let k = 0 ; k < n; k++) {
      if(k != i && (array[i] + array[k] )=== target) {
-        k = k + n
-        i = i + n
+        // k = k + n
+        // i = i + n
         return true
      }
    }
@@ -18,12 +18,18 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
-  use a nested loop to see if one number in the array added to another number in the array will
-  total to the target value
+  for the first half of numbers in the array , find another number whose combined total equals the target
+  iterate through the entire array to find the second value
+  return true if there is a pair of numbers who total equals the target
+  terminate the loop
+  if we iterate through the entire array without finding a pair, then return false
 */
 
 /*
   Add written explanation of your solution here
+  use a nested loop to see if one number in the array added to another number in the array will
+  total to the target value
+  make sure that we're not adding the same array index to itself
 */
 
 // You can run `node index.js` to view these console logs
