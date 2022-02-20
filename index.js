@@ -1,5 +1,15 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+ for (let i = 0 , n = array.length ; i < (n / 2) ; i++){
+   for(let k = 0 ; k < n; k++) {
+     if(k != i && (array[i] + array[k] )=== target) {
+        k = k + n
+        i = i + n
+        return true
+     }
+   }
+ }
+ return false
 }
 
 /* 
@@ -8,6 +18,8 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+  use a nested loop to see if one number in the array added to another number in the array will
+  total to the target value
 */
 
 /*
